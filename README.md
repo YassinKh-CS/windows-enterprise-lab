@@ -2,7 +2,7 @@
 
 Laboratoire d'infrastructure Windows virtualisé : domaine Active Directory, DNS, DHCP, partages de fichiers par service et stratégies de groupe. Projet réalisé dans le cadre de mon BTS SIO option SISR (IFC Avignon).
 
-**Dossier technique complet (35 pages, français) :** [`docs/Khaltech_Solutions_Documentation.pdf`](docs/Khaltech_Solutions_Documentation.pdf)
+**Dossier technique complet (35 pages, français) :** [`docs/Khaltech_Solutions_Documentation.pdf`](Khaltech_Solutions_Documentation.pdf)
 
 ## Objectif
 
@@ -18,7 +18,7 @@ Construire de bout en bout l'infrastructure Windows d'une petite entreprise fict
 | Domaine | `khaltech.local` (nouvelle forêt) |
 | Réseau | `192.168.10.0/24`, pool DHCP `.100` à `.200`, options 006 (DNS) et 015 (domaine) |
 
-![Machines virtuelles](screenshots/Machines-within-the-Infra.png)
+![Machines virtuelles](Machines-within-the-Infra.png)
 
 ## Ce qui a été réalisé
 
@@ -28,7 +28,7 @@ Construire de bout en bout l'infrastructure Windows d'une petite entreprise fict
 - **Partages SMB** `HR` et `IT` : permissions de partage (Change) et NTFS (Modify) séparées, accordées aux groupes de service, héritage désactivé.
 - **GPO ordinateur** `GPO-Workstation-Security-Baseline` liée à l'OU `COMPUTERS` (pare-feu activé pour le profil de domaine).
 
-![Structure AD](screenshots/01-windows-enterprise.png)
+![Structure AD](01-windows-enterprise.png)
 
 ## Tests de validation
 
@@ -38,9 +38,9 @@ Construire de bout en bout l'infrastructure Windows d'une petite entreprise fict
 | Accès au partage HR par Alex (service IT) | Accès refusé |
 | `gpresult` sur le poste client | `GPO-Workstation-Security-Baseline` et `Default Domain Policy` appliquées |
 
-![Permissions HR](screenshots/01-07-HR-SMB-and-NTFS-Permissions.png)
-![Alex refusé](screenshots/01-09-Alex-Denied-HR-Share.png)
-![gpresult](screenshots/06-computer-gpo-gpresult.png)
+![Permissions HR](01-07-HR-SMB-and-NTFS-Permissions.png)
+![Alex refusé](01-09-Alex-Denied-HR-Share.png)
+![gpresult](06-computer-gpo-gpresult.png)
 
 ## Incident résolu : « Accès refusé » à la création du partage HR
 
