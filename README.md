@@ -57,9 +57,7 @@ New-SmbShare -Name "HR" -Path "C:\Shares\HR" -ChangeAccess "KHALTECH\GG_HR_Staff
 
 ## Limites et suite
 
-- Un seul contrôleur de domaine, réseau isolé sans accès Internet, Windows Server en version d'évaluation.
-- En cours de documentation : vérification des baux DHCP, tests d'accès au partage IT, GPO utilisateur du service IT.
-- Prochains projets : laboratoire réseau, helpdesk GLPI, laboratoire Linux.
+Vérification : Get-DhcpServerv4Scope confirme l’étendue KHALTECH-LAN (192.168.10.100 à .200, active). Get-DhcpServerv4Lease montre le bail 192.168.10.100 attribué à KTS-CLIENT01.khaltech.local (état Active). Les options 006 (DNS 192.168.10.10), 015 (khaltech.local) et 051 (bail de 8 jours) sont distribuées.
 
 ## Contact
 
